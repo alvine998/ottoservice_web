@@ -1,12 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import Home from './pages/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Home/>
-    </div>
+    <Router>
+      <Switch>
+        <Route path={"/"}>
+          <Home/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
